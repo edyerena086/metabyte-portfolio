@@ -4,10 +4,11 @@ import React, { FC, Fragment } from 'react'
 // Import types
 import { SectionTitlePropsInterface } from './types'
 
-const SectionTitle: FC<SectionTitlePropsInterface> = ({ children, subTitle, isCentered }) => {
+const SectionTitle: FC<SectionTitlePropsInterface> = ({ children, subTitle, isCentered, isInverted }) => {
 
   const extraStyles = [
-    isCentered ? 'text-center' : null
+    isCentered ? 'text-center' : null,
+    isInverted ? 'text-white' : null
   ]
 
   return (

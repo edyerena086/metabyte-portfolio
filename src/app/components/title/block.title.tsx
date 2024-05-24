@@ -4,9 +4,14 @@ import React, { FC } from 'react'
 // Import types
 import { TitleBasePropsInterface } from './types'
 
-const BlockTitle: FC<TitleBasePropsInterface> = ({ children }) => {
+const BlockTitle: FC<TitleBasePropsInterface> = ({ children, isInverted }) => {
+  
+  const extraStyles = [
+    isInverted ? 'text-white' : null
+  ]
+
   return (
-    <h3 className={'text-4xl uppercase font-medium'}>
+    <h3 className={`text-4xl uppercase font-medium ${extraStyles.join(' ')}`}>
       {
         children
       }

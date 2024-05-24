@@ -8,17 +8,17 @@ import BlockTitle from './block.title'
 // Import types
 import { TitlePropsInterface } from './types'
 
-const Title: FC<TitlePropsInterface> = ({ children, type = 'section', subTitle, isCentered}) => {
+const Title: FC<TitlePropsInterface> = ({ children, type = 'section', subTitle, isCentered, isInverted}) => {
 
   switch (type) {
     case 'main':
       return (<h1>Hello World</h1>)
     
     case 'block':
-      return (<BlockTitle>{ children }</BlockTitle>)
+      return (<BlockTitle isInverted={isInverted}>{ children }</BlockTitle>)
   
     default:
-      return (<SectionTitle isCentered={isCentered} subTitle={subTitle}>{children}</SectionTitle>)
+      return (<SectionTitle isInverted={isInverted} isCentered={isCentered} subTitle={subTitle}>{children}</SectionTitle>)
   }
 }
 
