@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Title } from '../app/components'
 
 const meta: Meta<typeof Title> = {
+  title: 'Design System/General/Title',
   component: Title,
   tags: ['autodocs'],
 }
@@ -15,5 +16,12 @@ export const SectionTitle: Story = {
   args: {
     type: 'section',
     children: 'This is a section title'
+  },
+}
+
+export const BlockTitle: Story = {
+  args: {
+    type: 'block',
+    children: 'Email marketing'
   },
 }

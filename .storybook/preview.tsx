@@ -22,7 +22,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <div className={kanit.className}>
-        <Story/>
+        <Story name={'default'}/>
       </div>
     )
   ]

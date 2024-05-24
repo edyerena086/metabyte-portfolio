@@ -1,5 +1,5 @@
 // Import core libraries
-import React, { FC } from 'react'
+import React, { FC, Fragment } from 'react'
 
 // Import types
 import { SectionTitlePropsInterface } from './types'
@@ -11,11 +11,18 @@ const SectionTitle: FC<SectionTitlePropsInterface> = ({ children, subTitle, isCe
   ]
 
   return (
-    <h2 className={`text-6xl font-bold uppercase ${extraStyles.join(' ')}`}>
+    <Fragment>
       {
-        children
+        subTitle 
+        && 
+        (<h6 className={`font-normal text-lg uppercase ${extraStyles.join(' ')}`}>{ subTitle }</h6>)
       }
-    </h2>
+      <h2 className={`text-6xl font-medium uppercase ${extraStyles.join(' ')}`}>
+        {
+          children
+        }
+      </h2>
+    </Fragment>
   )
 }
 
